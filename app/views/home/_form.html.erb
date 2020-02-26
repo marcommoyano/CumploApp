@@ -1,0 +1,27 @@
+<div class="card-panel py-5">
+  <%= form_for :range, url: home_search_path, method: :get do |f| %>
+    <div class="row">
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="">
+              <%= f.label :first_date, t(:Desde) %>
+              <%= f.date_field :first_date, class: 'datepicker', required: :true %>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="">
+              <%= f.label :second_date, t(:Hasta) %>
+              <%= f.date_field :second_date, class: 'datepicker', required: :true %>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="">
+              <%= f.submit 'Buscar', class: 'btn btn-success' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

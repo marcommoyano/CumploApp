@@ -1,0 +1,85 @@
+<div class="container">
+  <%= render 'form' %>
+</div>
+<div class="container-fluid">
+  <div class="col m6 s12 hoverable">
+    <h3 class="pt-5">DOLAR</h3>
+    <div class="row pb-5">
+      <div class="col-sm-9">
+        <%= line_chart [
+          {name: "DOLAR", data: @dolar}
+          ], xtitle: "Fecha", ytitle: "Valor"
+        %>
+      </div>
+      <div class="col-sm-3">
+        <table border="1">
+          <tr>
+            <td>MIN</td>
+            <td><%= @min_dolar %></td>
+          </tr>
+          <tr>
+            <td>MAX</td>
+            <td><%= @max_dolar %></td>
+          </tr>
+          <tr>
+            <td>PROMEDIO</td>
+            <td><%= @prom_dolar %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br><br><br>
+
+    <h3 class="pt-5">UF</h3>
+    <div class="row pb-5">
+      <div class="col-sm-9">
+        <%= line_chart [
+          {name: "UF", data: @uf}
+          ], xtitle: "Fecha", ytitle: "Valor"
+        %>
+      </div>
+      <div class="col-sm-3">
+        <table border="1">
+          <tr>
+            <td>MIN</td>
+            <td><%= @min_uf %></td>
+          </tr>
+          <tr>
+            <td>MAX</td>
+            <td><%= @max_uf %></td>
+          </tr>
+          <tr>
+            <td>PROMEDIO</td>
+            <td><%= @prom_uf %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    <h3 class="pt-5">TMC</h3>
+    <div class="row pb-5">
+      <div class="col-sm-9">
+        <%= line_chart @tmc.map { |tmc|
+                                  {name: "Tipo #{tmc[0]}", data: tmc[1]}
+                                }, xtitle: "Fecha", ytitle: "Valor"
+        %>
+      </div>
+      <div class="col-sm-3">
+        <table border="1">
+          <tr>
+            <th>TIPO</td>
+            <th>MAX VALOR</td>
+            <th>FECHA</td>
+          </tr>
+          <% @max_tcm_per_type.each do |tmc| %>
+          <tr>
+            <td><%= tmc[:name] %></td>
+            <td><%= tmc[:max_value] %></td>
+            <td><%= tmc[:date] %></td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+current directory: /Users/marcommoyano/Desktop/CUMPLO/cumploapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/marcommoyano/.rvm/rubies/ruby-2.3.1/bin/ruby -I /Users/marcommoyano/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0 -r ./siteconf20200224-47783-n6j07q.rb extconf.rb
+creating Makefile
+
+current directory: /Users/marcommoyano/Desktop/CUMPLO/cumploapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/marcommoyano/Desktop/CUMPLO/cumploapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/marcommoyano/Desktop/CUMPLO/cumploapp/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20200224-47783-fwi5z2/skiptrace/internal
