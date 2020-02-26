@@ -23,7 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'rest-client'
 gem "chartkick"
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
